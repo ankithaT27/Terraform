@@ -1,1 +1,6 @@
 # Terraform
+
+<block> <parameter>
+{
+arguments
+}
