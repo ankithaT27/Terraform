@@ -11,5 +11,14 @@ provider "aws"{
 region = 'us-east-1"
 }
 
-resource aws
+resource "aws_key_pair" "mykeypair"{
+key_name="terraformkey
+public_key= file("/home/ubuntu/. shh/terraformkey.pub")
+
+resource "aws_instance" "myec2"{
+key=aws_key_pair.mykeypair.key_name
+
+}
+
+
 
