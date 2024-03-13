@@ -3,6 +3,6 @@ region="us-east-1"
 }
 
 
-resources "aws_s3_instance" "terraform_origin_bucket{
-   bucket="m_y_b_u_cket"
+resources "aws_s3_bucket" "terraform_origin_bucket"{
+   bucket="ankitha1233"
 }
