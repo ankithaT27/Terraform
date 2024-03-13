@@ -19,4 +19,7 @@ terraform{
   resource "docker_container" "nginx_container"{
     name="nginx_container"
       image=docker_image.nginx
+     ports{
+        internal_Port=80
+        external_port=80
   }
