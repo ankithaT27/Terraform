@@ -20,3 +20,10 @@ resource "aws_instance" "myec2" {
   ami=var.my_ami
   instance_type = "t2.micro"
 }
+
+
+
+output "public_ip"{
+description="public ip is"
+value=aws_instnace.myec2.public_ip
+}
