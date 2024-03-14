@@ -23,7 +23,7 @@ resource "aws_security_group" "my_Securitygroup"{
 name= "allow ssh"
 description ="allow shh traffic from developers"
 
-vpc_id = aws_default_vpc.default_vpc_id
+vpc_id = aws_default_vpc.default_vpc.id
 ingress{
 description="TLS from VPC"
 protocol="TCP"
@@ -35,7 +35,7 @@ cidr_blocks = ["0.0.0.0/0"]
 
 }
 
-tags{
+tags={
 name="ssh"
 }
 }
@@ -49,8 +49,8 @@ default=" "
 
 resource "aws_instance" "myec2"{
 #key=aws_key_pair.mykeypair.key_name
-ami_id=var.my_ami_id
-instance_type=t2.micro
+ami=var.my_ami_id
+instance_type="t2.micro"
 security_groups=[aws_security_group.my_Securitygroup]
 
 }
