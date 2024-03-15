@@ -1,8 +1,9 @@
-variable ami
+variable amivalue
 {
   type=string"
-  value="
+  value=""
+}
 
-
-
-  instance_type
+  variable instance_type
+{
+}
