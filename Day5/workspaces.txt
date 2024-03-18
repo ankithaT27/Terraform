@@ -1,1 +1,3 @@
-
+workspaces:
+solves the problem of single state file (or) create state files as per staging(dev,stage,prod etc)
+Each stage has its own state files, when we are in the prod workspace, prod state files is updated, and when we are in dev, dev stage files are updated.
